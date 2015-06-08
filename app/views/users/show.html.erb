@@ -1,0 +1,14 @@
+<%=provide(:title, @user.name.capitalize)%>
+<div class = "row">
+	<aside class="col-md-4">
+		<section class="user_info">
+			<h1>
+				<%=link_to image_tag("rails.png", alt: "Rails logo", width: 100, height: 100) ,'https://rubyonrails.org' %>
+				
+				<%= @user.name.capitalize%>
+			</h1>
+		</section>
+	</aside>
+</div>
+
+
