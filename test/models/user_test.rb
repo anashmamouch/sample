@@ -6,7 +6,7 @@ class UserTest < ActiveSupport::TestCase
  	@user = User.new(name: "Anas", email:"anas@gmail.com", password:"secret", password_confirmation: "secret")
  end
 
- test "should be valid" do
+ test "user should be valid" do
  	assert @user.valid?
  end
 
@@ -66,5 +66,9 @@ class UserTest < ActiveSupport::TestCase
  test "email should be saved in downcase" do
  	
 
+ end
+
+ test "authenticate? should return false for a user with a nil digest" do
+ 	assert_not @user.authenticate?('')
  end	
 end

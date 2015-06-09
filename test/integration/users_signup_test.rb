@@ -29,5 +29,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_equal before_count, after_count
     
     assert_template 'users/show'
+    assert is_logged_in?
   end
 end
